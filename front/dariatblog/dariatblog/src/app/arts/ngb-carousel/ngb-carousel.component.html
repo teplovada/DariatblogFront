@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="picsum-img-wrapper">
+        <img class="carousel-img" [src]="image.path" [alt]="image.name" />
+      </div>
+      <div class="container">
+        <h4>{{ image.name }}</h4>
+        <p>{{ image.year }}</p>
+        <p>{{ image.location }}</p>
+        <p>{{ image.paintingTechnique }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
